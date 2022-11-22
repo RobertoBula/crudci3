@@ -39,24 +39,8 @@
 			</div>
 			<button type="submit" class="btn btn-primary col-12 mb-3">Guardar</button>
 			<?php form_close(); ?>
+			<a type="button" class="btn btn-outline-primary col-12" href="<?php echo base_url('welcome/spreadsheet') ?>">Spreadsheet</a>
 		</div>
-		<?php
-		// if ($this->session->flashdata('message')) {
-		// 	echo $this->session->flashdata('message');
-		// }
-		?>
-		<!-- libreria xlsx -->
-		<form method="post" action="<?php echo base_url('welcome/spreadsheet_import'); ?>" enctype="multipart/form-data">
-			<div class="d-flex justify-content-between">
-				<a href="<?php echo base_url('welcome/spreadsheet_download_format') ?>" target="_blank" class="btn btn-success col-5">Download excel format</a>
-				<button class="btn btn-info text-white col-5">Download excel data</button>
-			</div>
-			<div class="mt-3">
-				<input type="file" name="upload_file" class="form-control" placeholder="Enter Name" id="upload_file" required>
-				<button type="submit" class="btn btn-primary col-3 mt-3 mb-3">submit</button>
-			</div>
-		</form>
-
 		<!-- tabla de datos -->
 		<div class="row">
 			<div class="card">

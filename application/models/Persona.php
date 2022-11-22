@@ -23,16 +23,6 @@ class Persona extends CI_Model {
         $this->db->where('id', $id_persona);
         $this->db->update('personas', $persona);
     }
-
-    public function insert_batch($data){
-        $values = ['nombre' => $data->Nombre, 'apellidos' => $data->Apellidos];
-        $this->db->insert_batch('personas',$values);
-        if ($this->db->affected_rows()>0) {
-            return 1; 
-        }else {
-            return 0;
-        }
-    }
 }
 
 ?>
